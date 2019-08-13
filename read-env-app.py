@@ -25,8 +25,8 @@ def index():
     print(current_path + '/conf/')
     with open(current_path + '/conf/' + 'config.yaml', 'r') as f:
         temp = yaml.load(f.read())
-        TOKEN = temp['ENV']['TOKEN']
-        LANGUAGE = temp['ENV']['LANGUAGE']
+        TOKEN = temp['ENVIRONMENT']['TOKEN']
+        LANGUAGE = temp['ENVIRONMENT']['LANGUAGE']
         return jsonify(token=TOKEN, lang=LANGUAGE)
 
 if __name__ == '__main__':
